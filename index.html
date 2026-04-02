@@ -1,0 +1,184 @@
+# LasconcecuenciasdelmalusodelaIA
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impacto y Consecuencias de la IA</title>
+
+<style>
+:root {
+  --azul-profundo: #1a2a6c;
+  --azul-acentuado: #4b6cb7;
+  --gris-fondo: #f8f9fa;
+  --texto: #2d3436;
+  --ancho-nav: 240px;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  background-color: var(--gris-fondo);
+  color: var(--texto);
+}
+
+/* Navegación Vertical Profesional */
+nav {
+  width: var(--ancho-nav);
+  height: 100%;
+  background-color: var(--azul-profundo);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #ecf0f1;
+  padding: 18px 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+nav a:hover {
+  background-color: var(--azul-acentuado);
+  border-left: 5px solid #fff;
+}
+
+/* Contenido Principal */
+main {
+  margin-left: var(--ancho-nav);
+  padding: 60px;
+  max-width: 1100px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--azul-profundo);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--azul-acentuado);
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Estructura de Secciones */
+.seccion {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.seccion-invertida {
+  flex-direction: row-reverse;
+}
+
+.bloque-texto {
+  flex: 1.2;
+}
+
+.bloque-visual {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.bloque-visual img,
+.bloque-visual video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .seccion,
+  .seccion-invertida {
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#desinformacion">Desinformación</a>
+  <a href="#privacidad">Privacidad</a>
+  <a href="#sesgos">Sesgos Algorítmicos</a>
+  <a href="#video-seccion">Video Análisis</a>
+</nav>
+
+<main>
+
+<header>
+  <h1>Consecuencias Éticas del Mal Uso de la IA</h1>
+  <p>Un análisis sobre cómo la tecnología mal empleada puede afectar la verdad y la libertad individual.</p>
+</header>
+
+<!-- Imagen a la derecha -->
+<section id="desinformacion" class="seccion">
+  <div class="bloque-texto">
+    <h2>La Amenaza de la Desinformación</h2>
+    <p>El uso de algoritmos para generar contenido falso, como los <em>deepfakes</em>, puede manipular la percepción de la realidad. Esto genera un ambiente de desconfianza digital donde distinguir lo real de lo artificial es cada vez más difícil.</p>
+  </div>
+  <div class="bloque-visual">
+    <img src="https://unsplash.com" alt="IA y Redes Neuronales">
+  </div>
+</section>
+
+<!-- Imagen a la izquierda -->
+<section id="privacidad" class="seccion seccion-invertida">
+  <div class="bloque-texto">
+    <h2>Vigilancia y Privacidad</h2>
+    <p>Sistemas de reconocimiento facial mal regulados pueden convertir espacios públicos en zonas de vigilancia constante. La recopilación masiva de datos biométricos sin consentimiento es uno de los mayores riesgos actuales para la privacidad ciudadana.</p>
+  </div>
+  <div class="bloque-visual">
+    <img src="https://unsplash.com" alt="Ciberseguridad y Privacidad">
+  </div>
+</section>
+
+<!-- Video a la derecha -->
+<section id="video-seccion" class="seccion">
+  <div class="bloque-texto">
+    <h2>Impacto en el Empleo y Sesgos</h2>
+    <p>La automatización sin ética puede desplazar trabajadores de forma abrupta y reforzar estereotipos sociales si los datos de entrenamiento están sesgados. Es crucial entender que la IA refleja los prejuicios de sus creadores.</p>
+  </div>
+  <div class="bloque-visual">
+    <video autoplay muted loop>
+      <source src="https://pexels.com" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+  </div>
+</section>
+
+</main>
+
+</body>
+  </html>
