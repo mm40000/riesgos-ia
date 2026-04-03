@@ -13,13 +13,11 @@
   --texto: #222;
 }
 
-/* MODO OSCURO */
 body.dark {
   --fondo: #121212;
   --texto: #f1f1f1;
 }
 
-/* GENERAL */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -29,7 +27,6 @@ body {
   transition: 0.3s;
 }
 
-/* NAV */
 nav {
   width: 220px;
   height: 100vh;
@@ -43,14 +40,12 @@ nav a {
   color: white;
   padding: 15px 20px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 nav a:hover {
   background: var(--azul);
 }
 
-/* BOTON DARK MODE */
 .toggle {
   margin: 20px;
   padding: 10px;
@@ -60,13 +55,15 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* MAIN */
 main {
   margin-left: 220px;
   padding: 40px;
 }
 
-/* SECCIONES */
+h1 {
+  font-size: 2.5rem;
+}
+
 .seccion {
   display: flex;
   gap: 40px;
@@ -93,7 +90,6 @@ img, iframe, video {
   border-radius: 10px;
 }
 
-/* BOTON BONITO */
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -101,14 +97,12 @@ img, iframe, video {
   color: white;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .btn:hover {
   background: var(--oscuro);
 }
 
-/* RESPONSIVE */
 @media(max-width: 800px){
   nav {
     position: relative;
@@ -138,12 +132,18 @@ img, iframe, video {
 
 <main>
 
-<h1>Impacto de la IA</h1>
+<h1>Consecuencias Éticas del Mal Uso de la Inteligencia Artificial</h1>
+<p>La inteligencia artificial (IA) ha transformado el mundo moderno, pero su uso inadecuado puede generar graves consecuencias sociales, económicas y éticas. A continuación, se analizan algunos de los principales riesgos.</p>
 
 <section id="uno" class="seccion">
   <div>
-    <h2>Desinformación</h2>
-    <p>Los deepfakes pueden manipular la realidad.</p>
+    <h2>Desinformación Digital</h2>
+    <h3>Manipulación de la realidad</h3>
+    <p>La IA permite crear contenido falso altamente realista, conocido como <em>deepfakes</em>. Estos pueden ser utilizados para difundir noticias falsas, engañar a las personas y afectar la opinión pública.</p>
+
+    <h3>Impacto en la sociedad</h3>
+    <p>La propagación de información falsa genera desconfianza en los medios digitales y puede influir en decisiones importantes como elecciones o conflictos sociales.</p>
+
     <a href="#" class="btn">Leer más</a>
   </div>
   <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
@@ -151,16 +151,24 @@ img, iframe, video {
 
 <section id="dos" class="seccion">
   <div>
-    <h2>Privacidad</h2>
-    <p>Los datos personales están en riesgo.</p>
+    <h2>Privacidad y Vigilancia</h2>
+    <h3>Recolección de datos</h3>
+    <p>Muchas aplicaciones de IA recopilan grandes cantidades de datos personales sin que los usuarios sean completamente conscientes de ello.</p>
+
+    <h3>Riesgos para la libertad</h3>
+    <p>El uso de tecnologías como el reconocimiento facial puede convertir espacios públicos en entornos de vigilancia constante, afectando la privacidad y los derechos individuales.</p>
   </div>
   <iframe src="https://www.youtube.com/embed/imlqI6bjlp8"></iframe>
 </section>
 
 <section id="tres" class="seccion">
   <div>
-    <h2>Impacto laboral</h2>
-    <p>La IA puede reemplazar empleos.</p>
+    <h2>Impacto en el Empleo</h2>
+    <h3>Automatización laboral</h3>
+    <p>La IA puede reemplazar trabajos humanos, especialmente aquellos que implican tareas repetitivas o mecánicas.</p>
+
+    <h3>Desigualdad social</h3>
+    <p>Si no se gestiona adecuadamente, la automatización puede aumentar la desigualdad económica y dejar a muchas personas sin oportunidades laborales.</p>
   </div>
   <video autoplay muted loop>
     <source src="https://cdn.coverr.co/videos/coverr-working-on-ai-technology-5170/1080p.mp4">
@@ -176,4 +184,4 @@ function modoOscuro(){
 </script>
 
 </body>
-                                      </html>
+</html>
