@@ -7,130 +7,167 @@
 
 <style>
 :root {
-  --primario: #2c3e50; /* Azul profesional */
-  --acento: #3498db;   /* Azul claro para botones */
-  --fondo: #ffffff;
-  --gris-suave: #f8f9fa;
-  --texto: #333;
-  --nav-ancho: 180px; /* Barra más delgada */
+  --primario: #0f172a; /* Azul casi negro profesional */
+  --acento: #3b82f6;   /* Azul moderno vibrante */
+  --fondo: #f1f5f9;
+  --tarjeta: #ffffff;
+  --texto: #1e293b;
+  --nav-ancho: 200px;
 }
 
 body.dark {
-  --fondo: #1a1a1a;
-  --texto: #e0e0e0;
-  --gris-suave: #2d2d2d;
+  --primario: #ffffff;
+  --acento: #60a5fa;
+  --fondo: #020617;
+  --tarjeta: #0f172a;
+  --texto: #f1f5f9;
 }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--fondo);
   color: var(--texto);
   display: flex;
-  flex-direction: row; /* Layout horizontal */
-  transition: 0.3s;
+  transition: background 0.4s ease;
 }
 
-/* CONTENIDO PRINCIPAL A LA IZQUIERDA */
+/* CONTENIDO PRINCIPAL */
 main {
   flex: 1;
-  margin-right: var(--nav-ancho); /* Espacio para la barra derecha */
-  padding: 60px 10%;
-  line-height: 1.6;
+  margin-right: var(--nav-ancho);
+  padding: 40px 5%;
+  max-width: 1000px;
 }
 
-/* BARRA DE NAVEGACIÓN A LA DERECHA */
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+  color: var(--primario);
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.25rem;
+  color: var(--acento);
+  margin-bottom: 60px;
+  font-weight: 500;
+}
+
+/* SECCIONES ESTILO TARJETA */
+.seccion {
+  background: var(--tarjeta);
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(125, 125, 125, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.seccion:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: var(--acento);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* MULTIMEDIA */
+.media-container {
+  margin-top: 25px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TABLA MODERNA */
+.tabla-pro {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 30px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabla-pro th {
+  background: var(--acento);
+  color: white;
+  padding: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.tabla-pro td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(125,125,125,0.1);
+  background: rgba(125,125,125,0.02);
+}
+
+/* BARRA DERECHA "GLASSMORTPHISM" */
 nav {
   width: var(--nav-ancho);
   height: 100vh;
-  background: var(--primario);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
   position: fixed;
-  right: 0; /* Alineada a la derecha */
-  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 40px 0;
+  border-left: 1px solid rgba(255,255,255,0.1);
 }
 
 nav a {
-  color: #bdc3c7;
-  padding: 15px 25px;
+  color: #94a3b8;
+  padding: 15px 30px;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: 0.3s;
-  border-right: 4px solid transparent;
+  font-weight: 500;
+  transition: all 0.3s;
 }
 
 nav a:hover {
   color: white;
-  background: rgba(255,255,255,0.1);
-  border-right: 4px solid var(--acento);
+  background: rgba(59, 130, 246, 0.2);
+  padding-left: 40px;
 }
 
 .toggle {
-  margin: 10px 20px 30px;
-  padding: 8px;
-  border: 1px solid rgba(255,255,255,0.3);
+  margin: 0 30px 40px;
+  padding: 12px;
+  border: 1px solid var(--acento);
   background: transparent;
   color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-
-/* SECCIONES Y DISEÑO */
-h1 { font-weight: 300; font-size: 2.8rem; margin-bottom: 40px; color: var(--primario); }
-body.dark h1 { color: var(--acento); }
-
-h2 { border-left: 5px solid var(--acento); padding-left: 15px; margin-top: 50px; }
-
-.seccion {
-  margin-bottom: 100px;
-  animation: fadeUp 1s ease-out forwards;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.media-container {
-  margin: 30px 0;
-  overflow: hidden;
   border-radius: 12px;
-  background: var(--gris-suave);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-img, video, iframe {
-  width: 100%;
-  display: block;
-  border: none;
-}
-
-.tabla-pro {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 30px 0;
-  background: var(--gris-suave);
-}
-
-.tabla-pro th, .tabla-pro td {
-  padding: 15px;
-  border: 1px solid #ddd;
-}
-
-.tabla-pro th {
-  background: var(--primario);
-  color: white;
-  font-weight: 500;
+.toggle:hover {
+  background: var(--acento);
 }
 
 /* RESPONSIVE */
-@media(max-width: 900px){
-  nav { width: 100%; height: auto; position: relative; right: auto; order: -1; }
+@media(max-width: 1000px){
+  nav { width: 100%; height: auto; position: relative; backdrop-filter: none; background: #0f172a; }
   main { margin-right: 0; padding: 20px; }
   body { flex-direction: column; }
+  h1 { font-size: 2.5rem; }
 }
 </style>
 </head>
@@ -139,7 +176,7 @@ img, video, iframe {
 
 <main>
   <h1>Desafíos Éticos de la IA</h1>
-  <p>La inteligencia artificial ha pasado de ser una promesa tecnológica a una fuerza que redefine la estructura de nuestra libertad y convivencia social.</p>
+  <p class="intro">La inteligencia artificial ha pasado de ser una promesa tecnológica a una fuerza que redefine la estructura de nuestra libertad y convivencia social.</p>
 
   <section id="uno" class="seccion">
     <h2>Desinformación y Realidad</h2>
@@ -194,7 +231,7 @@ img, video, iframe {
 </main>
 
 <nav>
-  <button class="toggle" onclick="modoOscuro()">🌓 Cambiar Tema</button>
+  <button class="toggle" onclick="modoOscuro()">🌓 TEMA</button>
   <a href="#uno">Desinformación</a>
   <a href="#dos">Libertad</a>
   <a href="#tres">Impacto Social</a>
